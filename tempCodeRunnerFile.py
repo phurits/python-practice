@@ -1,3 +1,0 @@
-
-        """
-        :type nums: List[int]
