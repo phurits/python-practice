@@ -1,15 +1,18 @@
 class Solution(object):
     def twoSum(self, nums, target):
         ind = [0,0]
-        for i in nums:
-            for j in nums:
-                if j != i:
-                    if j + i == target:
-                        ind[0] = nums.index(i)
-                        ind[1] = nums.index(j)
-                        ind.sort()
+        for x,y in enumerate(nums):
+            for xx,yy in enumerate(nums):
+                if y + yy == target and x != xx:
+                    ind[0] = x
+                    ind[1] = xx
+                    ind.sort()
         return ind
 
         
 
-inp = [int(x) for x in input().split()]
+nums = [int(x) for x in input().split()]
+target = int(input())
+
+ans = Solution().twoSum(nums,target)
+print(ans)
