@@ -5,15 +5,23 @@ class Solution(object):
         shortestsubstring = ""
         for letter in t:
             word.append(letter)
-        
+
+        # if length of S is shorter than lenght of T
+        if len(s) < len(t):
+            return shortestsubstring
+
+        # Start Checking All Substring
         for start_index in range(len(s)):
             temp = []
             for j in range(start_index,len(s)):
-                temp.append(s[j])
                 count = 0
-                for letter in word:
-                    if letter in temp:
+                temp.append(s[j])
+                wordcheck = word.copy()
+                for letter in temp:
+                    if letter in wordcheck:
                         count += 1
+                        wordcheck[wordcheck.index(letter)] = 0
+                
                 if count == len(word):
                     ########## Convert List to String #########
                     newss = ""
@@ -26,8 +34,7 @@ class Solution(object):
                     
                     break
                     
-        return shortestsubstring
-
+        return  shortestsubstring
 
 s = input()
 t = input()
