@@ -11,7 +11,6 @@ class Solution(object):
             ans.append(int(text[i]))
         return ans
 
-
 digits = [int(x) for x in input().split()]
 
 ans = Solution().plusOne(digits)
