@@ -21,6 +21,6 @@ class Solution:
 
 
 
-s = "MCMXCIV"
+s = "MMMMCM"
 ans = Solution().romanToInt(s)
 print(ans)
