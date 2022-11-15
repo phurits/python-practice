@@ -1,14 +1,1 @@
-class MedianFinder:
-    def __init__(self):
-        self.value = []
-
-    def addNum(self, num: int) -> None:
-        self.value.append(num)
-
-    def findMedian(self) -> float:
-        self.value.sort()
-        mid = len(self.value) //2
-        if len(self.value) % 2 == 0:
-            return (self.value[mid] + self.value[mid - 1])
-        else:
-            return self.value[mid]
+,visited
