@@ -1,1 +1,1 @@
-sumlist
+delCol += 1
